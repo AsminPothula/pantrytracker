@@ -1,29 +1,29 @@
-// Import the functions you need from the SDKs you need
+// Import the necessary functions from the Firebase SDK
 import { initializeApp } from "firebase/app";
-import { getFirestore } from "firebase/firestore";
-import { getAnalytics, isSupported } from "firebase/analytics";
- 
+import { getFirestore } from "firebase/firestore"; 
+import {getAnalytics, isSupported} from "firebase/analytics";
+
 // Your web app's Firebase configuration
 const firebaseConfig = {
-  apiKey: "AIzaSyCixRFcod2DLNcj43mOSBFisg1bDCXUsUE",
-  authDomain: "pantry-management-e5a53.firebaseapp.com",
-  projectId: "pantry-management-e5a53",
-  storageBucket: "pantry-management-e5a53.appspot.com",
-  messagingSenderId: "18519859081",
-  appId: "1:18519859081:web:8e10e80fde15614aec8b58",
-  measurementId: "G-15CYVP7R1J"
+  apiKey: "AIzaSyAQ9dVqZAWX46gp_1uiiNR9Fgd8uvKNXhA",
+  authDomain: "pantrytracker-headstarter.firebaseapp.com",
+  projectId: "pantrytracker-headstarter",
+  storageBucket: "pantrytracker-headstarter.appspot.com",
+  messagingSenderId: "537546835003",
+  appId: "1:537546835003:web:6f777846ef97eb9ba1881e",
+  measurementId: "G-CM95FCT9G4"
 };
- 
+
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
- 
-// Initialize Firestore
-const firestore = getFirestore(app);
- 
-// Conditionally initialize Analytics
+const firestore = getFirestore(app); // Initialize Firestore
 let analytics;
-if (typeof window !== 'undefined' && isSupported()) {
+if (typeof window !== 'undefined' && isSupported()){
   analytics = getAnalytics(app);
 }
- 
+
 export { firestore };
+
+/////
+
+
